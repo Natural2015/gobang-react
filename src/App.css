@@ -1,0 +1,49 @@
+.App {
+  text-align: center;
+  background: antiquewhite;
+}
+.header {
+  margin: 0;
+  padding: 20px;
+}
+.handle-area-btn {
+  padding: 10px 20px;
+  background-color: #814c24;
+  border-radius: 3px;
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.handle-area-btn:not(:disabled):hover {
+  background-color: #b9601d;
+  cursor: pointer;
+}
+.handle-area-btn:disabled:hover {
+  cursor: not-allowed;
+}
+
+.user-area,
+.handle-area {
+  text-align: left;
+  padding: 10px 20px;
+}
+
+.user-area {
+  font-size: large;
+  font-weight: bold;
+  text-align: left;
+}
+.user-area span {
+  padding-left: 20px;
+}
+.user-area span.active::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-left-color: black;
+}

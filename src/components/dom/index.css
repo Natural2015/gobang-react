@@ -1,0 +1,72 @@
+.dom-board {
+  box-sizing: border-box;
+  margin: 0 auto;
+  margin-bottom: 4px;
+  background-color: #b36836;
+  border-radius: 5px;
+  display: flex;
+}
+.dom-board-y {
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+}
+div.dom-board-y > div {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+}
+div.dom-board-y > div:first-child {
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+}
+div.dom-board-y > div:nth-child(2) {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+div.dom-board-y > div:nth-child(3) {
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+}
+div.dom-board-y > div:nth-child(4) {
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+}
+
+/** 擦掉上方多余的线 */
+div.dom-board-x > div.dom-board-y:first-child div:first-child {
+  border-right-width: 0;
+}
+div.dom-board-x > div.dom-board-y:first-child div:nth-child(2) {
+  border-left-width: 0;
+}
+/** 擦掉左侧多余的线 */
+div.dom-board-x:first-child > div.dom-board-y div:first-child {
+  border-bottom-width: 0;
+}
+div.dom-board-x:first-child > div.dom-board-y div:nth-child(3) {
+  border-top-width: 0;
+}
+/** 擦掉下方多余的线 */
+div.dom-board-y:last-child div:nth-child(3) {
+  border-right-width: 0;
+}
+div.dom-board-y:last-child div:nth-child(4) {
+  border-left-width: 0;
+}
+/** 擦掉右侧多余的线 */
+div.dom-board-x:last-child > div.dom-board-y div:nth-child(2) {
+  border-bottom-width: 0;
+}
+div.dom-board-x:last-child > div.dom-board-y div:nth-child(4) {
+  border-top-width: 0;
+}
+
+div.dom-board-y img {
+  position: relative;
+  margin-top: -40px;
+  height: 36px;
+  width: 36px;
+}
